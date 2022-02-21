@@ -1,4 +1,3 @@
-/*
 
 var mongoose = require('mongoose')
   , Schema = mongoose.Schema
@@ -45,10 +44,12 @@ me.save(function (err) {
   if (err) return handleError(err);
 });
 
-/*Bob now exists, so lets create a story
+/*
+I have no idea what's wrong with arrays or why they cause Error to me !
+
 var skills = new Skills({
   title: ["Leadership" , "Writing & Content creation" , " Documentation"],
-  person: me._id    // assign the _id from our author Bob. This ID is created by default!
+  person: me._id    
 });
 
 skills.save(function (err) {
@@ -63,8 +64,6 @@ for(var i= 0 ; i < skills.title.length ; i++) {
 
 
 /* To see the name result in Portfolio */
-
-/*
 console.log(me.name) ;
 const express = require ("express");
 
@@ -82,4 +81,3 @@ app.get("/" , (req,res)=>{
     res.render("portfolio" ,{ name: me.name});
 });
 
-*/
